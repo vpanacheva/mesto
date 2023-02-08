@@ -8,11 +8,15 @@
      max-width: 430px;
     width: 100%;
     box-sizing: border-box;
+    position: absolute;
+    top: 195px;
+    left: auto;
 }
 @media screen and (max-width: 768px){
  .popup__container{
     max-width: 282px;
     padding: 25px 22px 25px;
+    top: 123px;
     }
 }
 

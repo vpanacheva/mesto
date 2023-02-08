@@ -4,13 +4,12 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" href="./pages/index.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Mesto</title>
+        <title>Места в России</title>
     </head>
     <body>
         <div class="page">
             <header class="header">
-                <img class="header__logo" src="./images/Vector.png" alt="Место">
-                <img class="header__line" src="./images/Line.png" alt="Линия">
+                <img class="header__logo" src="./images/mesto.svg" alt="Место В России">
             </header>
             <main class="content">
                 <section class="profile">
@@ -29,7 +28,7 @@
                 <section class ="cards">
                     <div class ="cards__info">
                         <div class ="cards__cover">
-                        <img class ="cards__img" src="./images/kirill-pershin-1088404-unsplash.png" alt="Карачаевск">
+                        <img class ="cards__img" src="./images/kirill-pershin-1088404-unsplash.png" alt="Вид на город Карачаевск">
                         <div class="cards__descrption">
                         <h2 class="cards__title">Карачаевск</h2>
                         <button class="cards__like-button" type="button"></button> 
@@ -38,7 +37,7 @@
                     </div>
                     <div class ="cards__info">
                         <div class ="cards__cover">
-                        <img class ="cards__img" src="./images/kirill-pershin-1404681-unsplash1.png" alt="Гора Эльбрус">
+                        <img class ="cards__img" src="./images/kirill-pershin-1404681-unsplash1.png" alt="Вид на гору Эльбрус">
                         <div class="cards__descrption">
                             <h2 class="cards__title">Гора Эльбрус</h2>
                         <button class="cards__like-button" type="button"></button> 
@@ -47,7 +46,7 @@
               </div>
                     <div class ="cards__info">
                         <div class ="cards__cover">
-                        <img class ="cards__img" src="./images/kirill-pershin-1556355-unsplash.png" alt="Домбай">
+                        <img class ="cards__img" src="./images/kirill-pershin-1556355-unsplash.png" alt="Вид на гору Домбай">
                         <div class="cards__descrption">
                             <h2 class="cards__title">Домбай</h2>
                         <button class="cards__like-button" type="button"></button> 
@@ -56,7 +55,7 @@
              </div>
                     <div class ="cards__info">
                         <div class ="cards__cover">
-                        <img class ="cards__img" src="./images/kirill-pershin-1088404-unsplash.png" alt="Карачаевск">
+                        <img class ="cards__img" src="./images/kirill-pershin-1088404-unsplash.png" alt="Вид на город Карачаевск">
                         <div class="cards__descrption">
                         <h2 class="cards__title">Карачаевск</h2>
                         <button class="cards__like-button" type="button"></button> 
@@ -65,7 +64,7 @@
              </div>
                     <div class ="cards__info">
                         <div class ="cards__cover">
-                        <img class ="cards__img" src="./images/kirill-pershin-1404681-unsplash1.png" alt="Гора Эльбрус">
+                        <img class ="cards__img" src="./images/kirill-pershin-1404681-unsplash1.png" alt="Вид на гору Эльбрус">
                         <div class="cards__descrption">
                             <h2 class="cards__title">Гора Эльбрус</h2>
                         <button class="cards__like-button" type="button"></button> 
@@ -74,7 +73,7 @@
              </div>
                     <div class ="cards__info">
                         <div class ="cards__cover">
-                        <img class ="cards__img" src="./images/kirill-pershin-1556355-unsplash.png" alt="Домбай">
+                        <img class ="cards__img" src="./images/kirill-pershin-1556355-unsplash.png" alt="Вид на гору Домбай">
                         <div class="cards__descrption">
                              <h2 class="cards__title">Домбай</h2>
                         <button class="cards__like-button" type="button"></button>
@@ -89,7 +88,7 @@
         <section class= "popup">
             <div class="popup__container">
                 <button class="popup__close-button" type="button"></button>
-                <form class="popup__form">
+                <form class="popup__form" name="popup-form">
                 <h3 class="popup__header">Редактировать профиль</h3>
                 <label class="popup__form-info">
                     <input type="text" name="name" placeholder="Имя" class="popup__input popup__input_type_name" value=""  required>
@@ -97,11 +96,11 @@
                 <label class="popup__form-info">
                     <input type="text" name="about" placeholder="Информация о себе" class="popup__input popup__input_type_about" value=""  required>
                 </label>
-                <button class="popup__save-button">Сохранить</button>
+                <button class="popup__save-button" type="button">Сохранить</button>
             </form>
             </div>
         </section>
     </div>
-        <script src="./pages/index.js"></script> 
+        <script src="./scripts/index.js"></script> 
     </body>
 </html>
