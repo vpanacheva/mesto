@@ -16,21 +16,18 @@
   }
   @media screen and (max-width: 485px){
     .profile__edit-button {
-      position: fixed;
-      top: 36%;
-      right: 0;
+      position: relative;
+      top: -60px;
+      left: 210px;
       margin: 0;
-      margin-right: 62px;
       width: 18px;
       height: 18px;
     }
   }
   @media screen and (max-width: 320px){
     .profile__edit-button {
-      position: fixed;
-      top: 31.5%;
-      right: 0;
-     margin-right: 37px;
+      left: 250px;
+      top: -50px;
   
   }
 }
