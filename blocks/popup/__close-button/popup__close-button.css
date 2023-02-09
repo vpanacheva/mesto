@@ -22,11 +22,15 @@ opacity: 50%;
     height: 25px;
     }
 }
-
+@media screen and (max-width: 485px){  
+    .popup__close-button{
+        left: 263px;
+        top: -36px;
+    }
+}
 @media screen and (max-width: 320px){  
 .popup__close-button{
     width: 20px;
     height: 20px;
-    left: 275px;
     }
 }
