@@ -125,9 +125,9 @@ const renderCard =(item)=>{
 const cardElement=createCard(item);
 cardsSection.prepend(cardElement);
 };
-initialCards.forEach=(card) =>{
-  renderCard(card);
-};
+initialCards.forEach (card__info =>{
+  renderCard(card__info);
+});
 
 
 formCard.addEventListener("submit", (evt) => {

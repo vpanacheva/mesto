@@ -1,0 +1,8 @@
+.card__img{
+    border-style: none;
+    display: block;
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    cursor: pointer;
+}

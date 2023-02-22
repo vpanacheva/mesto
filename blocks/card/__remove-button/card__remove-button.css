@@ -11,3 +11,6 @@ background-color: transparent;
 background-repeat: no-repeat;
 cursor: pointer;
 }
+.card__remove-button:hover{
+    opacity: 50%;
+}
