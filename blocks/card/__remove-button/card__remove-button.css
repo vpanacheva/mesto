@@ -1,0 +1,13 @@
+.card__remove-button{
+background-image: url(../../../images/gr.svg);
+width: 18px;
+height: 18px;
+position: absolute;
+top: 20px;
+right: 20px;
+object-fit: cover; 
+border: none;
+background-color: transparent;
+background-repeat: no-repeat;
+cursor: pointer;
+}
