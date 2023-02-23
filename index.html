@@ -25,10 +25,10 @@
             </div>
                     <button class="profile__add-button" type="button"></button>
                 </section>
-                <div class ="cards">
-                    <div class ="card__info">
-             </div> 
-            </div>
+                <section class ="cards">
+                    <ul class ="cards__info">
+             </ul> 
+                </section>
             </main>
             <footer class="footer">
                 <p class="footer__copyright">&copy; 2023 Mesto Russia</p>
@@ -66,7 +66,7 @@
         </section>
         <section class="popup popup_type_image">
             <div class="popup__image-container">
-              <button class="popup__close-button popup__close-button_type_image" type="button"></button>
+                <button class="popup__close-button popup__close-button_type_image " type="button"></button>
               <figure>
               <img src="#" alt="" class="popup__image">
               <figcaption class="popup__figcaption"></figcaption>
@@ -75,7 +75,7 @@
           </section>
     </div> 
     <template id="card__template">
-        <div class ="card__info">
+        <li class ="card__info">
             <div class ="card__cover">
             <img class ="card__img" src="#" alt="">
             <button class="card__remove-button" type="button"></button>
@@ -84,7 +84,7 @@
             <button class="card__like-button" type="button"></button>
 </div>
 </div>
-</div>
+</li>
     </template>
         <script src="./scripts/index.js"></script> 
     </body>

@@ -49,7 +49,6 @@ let linkCard=document.querySelector(".popup__input_type_link");
 let imgClicked = document.querySelector(".popup__image");
 let nameImgClicked = document.querySelector(".popup__figcaption");
 
-let card = document.querySelector(".card");
 let cardsSection =  document.querySelector(".cards");
 let cardTemplate = document.querySelector("#card__template"); 
 
