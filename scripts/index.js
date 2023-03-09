@@ -1,3 +1,4 @@
+
 const initialCards = [
   {
     name: 'Архыз',
@@ -146,4 +147,3 @@ cardAddButton.addEventListener("click", function () {
 newCardElement.addEventListener("submit", submitEditProfileForm);
 profileEditButton.addEventListener("click", openEditProfileForm);
 profileSaveButton.addEventListener('click', submitEditProfileForm);
-
