@@ -1,4 +1,4 @@
-
+import { validationOptions, disablesSubmitForm } from "./validate.js";
 const initialCards = [
   {
     name: 'Архыз',
@@ -52,13 +52,23 @@ const nameImgClicked = document.querySelector(".popup__figcaption");
 const cardsSectionSelector = document.querySelector(".cards");
 const cardTemplateSelector = document.querySelector('#card__template').content;
 
+const closePopupEsc = (evt) => {
+  if (evt.keyCode === 27) {
+    const popupAll = document.querySelector(".popup_opened");
+    closePopup(popupAll);
+  }
+};
+
 function openPopup(popup) {
   popup.classList.add("popup_opened");
+  document.addEventListener("keydown", closePopupEsc);
 }
 
 function closePopup(popup) {
   popup.classList.remove("popup_opened");
+  document.removeEventListener("keydown", closePopupEsc);
 }
+
 const popups = document.querySelectorAll('.popup')
 
 popups.forEach((popup) => {
@@ -133,8 +143,7 @@ newCardForm.addEventListener("submit", (evt) => {
     link: cardLinkInput.value,
   });
 
-
-  evt.target.reset();
+  // evt.target.reset();
   closePopup(popupEditCard);
 });
 
@@ -142,6 +151,7 @@ cardAddButton.addEventListener("click", function () {
   openPopup(popupEditCard);
   cardTitleInput.value = '';
   cardLinkInput.value = '';
+  disablesSubmitForm(validationOptions, newCardForm);
 });
 
 newCardElement.addEventListener("submit", submitEditProfileForm);
