@@ -1,30 +1,4 @@
 import { validationOptions, disablesSubmitForm } from "./validate.js";
-const initialCards = [
-  {
-    name: 'Архыз',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
-  },
-  {
-    name: 'Челябинская область',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
-  },
-  {
-    name: 'Иваново',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
-  },
-  {
-    name: 'Камчатка',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
-  },
-  {
-    name: 'Холмогорский район',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
-  },
-  {
-    name: 'Байкал',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
-  }
-];
 
 const popupEditProfile = document.querySelector(".popup_type_info");
 const popupEditCard = document.querySelector(".popup_type_card");
@@ -52,8 +26,10 @@ const nameImgClicked = document.querySelector(".popup__figcaption");
 const cardsSectionSelector = document.querySelector(".cards");
 const cardTemplateSelector = document.querySelector('#card__template').content;
 
+const keyEsc = 27;
+
 const closePopupEsc = (evt) => {
-  if (evt.keyCode === 27) {
+  if (evt.keyCode === keyEsc) {
     const popupAll = document.querySelector(".popup_opened");
     closePopup(popupAll);
   }
@@ -143,14 +119,14 @@ newCardForm.addEventListener("submit", (evt) => {
     link: cardLinkInput.value,
   });
 
-  // evt.target.reset();
+  console.log(evt.target);
+  evt.target.reset();
   closePopup(popupEditCard);
 });
 
 cardAddButton.addEventListener("click", function () {
   openPopup(popupEditCard);
-  cardTitleInput.value = '';
-  cardLinkInput.value = '';
+  newCardForm.reset();
   disablesSubmitForm(validationOptions, newCardForm);
 });
 
