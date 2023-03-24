@@ -30,8 +30,8 @@ const cardsSectionSelector = document.querySelector(".cards");
 const keyEsc = 27;
 const closePopupEsc = (evt) => {
   if (evt.keyCode === keyEsc) {
-    const popupAll = document.querySelector(".popup_opened");
-    closePopup(popupAll);
+    const popup = document.querySelector(".popup_opened");
+    closePopup(popup);
   }
 };
 
@@ -115,6 +115,8 @@ profileEditButton.addEventListener('click', function () {
 
 cardAddButton.addEventListener('click', function () {
   formCardValidation.disablesSubmitForm();
+  cardTitleInput.value=''; 
+  cardLinkInput.value=''; 
   openPopup(popupEditCard);
 });
 
