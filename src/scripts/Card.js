@@ -1,10 +1,10 @@
-class Card {
-    constructor(data, templateSelector, viewPopupImage) {
-      this._name = data.name;
-      this._link = data.link;
-      this._viewPopupImage = viewPopupImage;
-      this._templateSelector = templateSelector;
-    }
+export class Card  {
+  constructor(data, templateSelector, viewPopupImage) {
+    this._name = data.name;
+    this._link = data.link;
+    this._viewPopupImage = viewPopupImage;
+    this._templateSelector = templateSelector;
+  }
     _getTemplate() {
         const cardElement = document
           .querySelector(this._templateSelector) 
@@ -36,14 +36,12 @@ class Card {
       }
     
       _setEventListeners() {
-        this._elementImg.addEventListener("click", () => {
+        this._elementImg.addEventListener('click', () => {
           this._viewPopupImage(this._name, this._link);
         });
-    
-        this._elementLike.addEventListener("click", () => this._like());
+           this._elementLike.addEventListener("click", () => this._like());
         this._elementRemove .addEventListener("click", () => this._remove());
       }
     }
     
-    export { Card };
     

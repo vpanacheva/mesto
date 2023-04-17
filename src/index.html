@@ -2,20 +2,20 @@
 <html lang="ru">
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="./pages/index.css">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Места в России</title>
     </head>
     <body>
         <div class="page">
             <header class="header">
-                <img class="header__logo" src="./images/mesto.svg" alt="Место В России">
+                <img class="header__logo" src="<%=require('./images/mesto.svg')%>" alt="Место В России">
             </header>
             <main class="content">
                 <section class="profile">
                     <div class="profile__container">
                     <div class="profile__avatar">
-                    <img class="profile__avatar-img" src="./images/image.jpg" alt="Жак-Ив Кусто">
+                    <img class="profile__avatar-img" src="<%=require('./images/image.jpg')%>" alt="Жак-Ив Кусто"> 
                 </div>
                 <div class="profile__info">
                     <h1 class="profile__title">Жак-Ив Кусто</h1>
@@ -39,7 +39,7 @@
                 <form class="popup__form popup__form-info" name="popup-form" novalidate>
                 <h3 class="popup__header">Редактировать профиль</h3>
                 <label class="popup__form-info">
-                    <input id="username-input" type="text" name="name" placeholder="Имя" class="popup__input popup__input_type_name" value="" minlength="2" maxlength="40" required>
+                    <input id="username-input" id="username-input" type="text" name="name" placeholder="Имя" class="popup__input popup__input_type_name" value="" minlength="2" maxlength="40" required>
                     <span class="popup__input-error username-input-error"></span>
                 </label>
                 <label class="popup__form-info">
@@ -89,9 +89,14 @@
 </div>
 </li>
     </template>
-    <script type="module" src="./scripts/constants.js"></script>
-    <script type="module" src="./scripts/FormValidator.js"></script>
+    <!-- <script type="module" src="./scripts/constants.js"></script>
     <script type="module" src="./scripts/Card.js"></script>
-    <script type="module" src="./scripts/index.js"></script>
+    <script type="module" src="./scripts/Popup.js"></script>
+    <script type="module" src="./scripts/PopupWithForm.js"></script>
+    <script type="module" src="./scripts/PopupWithImage.js"></script>
+    <script type="module" src="./scripts/Section.js"></script>
+    <script type="module" src="./scripts/UserInfo.js"></script>
+    <script type="module" src="./scripts/FormValidator.js"></script>
+    <script type="module" src="./scripts/index.js"></script>-->
     </body>
 </html>
