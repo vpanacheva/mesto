@@ -1,15 +1,15 @@
-import '../src/pages/index.css';
+import '../index.css';
 
-import { Card } from './scripts/Card';
-import { FormValidator } from './scripts/FormValidator.js';
-import { Section } from './scripts/Section.js';
+import { Card } from '../scripts/components/Card';
+import { FormValidator } from '../scripts/components/FormValidator.js';
+import { Section } from '../scripts/components/Section.js';
 
-import { PopupWithImage } from './scripts/PopupWithImage.js';
+import { PopupWithImage } from '../scripts/components/PopupWithImage.js';
 
-import { PopupWithForm } from './scripts/PopupWithForm.js';
+import { PopupWithForm } from '../scripts/components/PopupWithForm.js';
 
-import { UserInfo } from './scripts/UserInfo.js';
-import { initialCards, validationOptions } from './scripts/constants.js';
+import { UserInfo } from '../scripts/components/UserInfo.js';
+import { initialCards, validationOptions } from '../scripts/constants/constants.js'; 
 
 const popupEditProfile = document.querySelector(".popup_type_info");
 const popupEditCard = document.querySelector(".popup_type_card");
@@ -65,14 +65,14 @@ profileEditButton.addEventListener('click', () => {
   profileValidation.disablesSubmitForm();
 })
 
-const popupAdd = new PopupWithForm('.popup_type_card', ({ name, link }) => {
+const popupAddCard= new PopupWithForm('.popup_type_card', ({ name, link }) => {
   cardsList.addItem(createCard({ name, link }));
-  popupAdd.close();
+  popupAddCard.close();
 })
-popupAdd.setEventListeners();
+popupAddCard.setEventListeners();
 
 cardAddButton.addEventListener('click', () => {
-  popupAdd.open();
+  popupAddCard.open();
   formCardValidation.disablesSubmitForm();
 })
 
