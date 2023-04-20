@@ -80,9 +80,6 @@ const popupViewImage = new PopupWithImage('.popup_type_image')
 popupViewImage.setEventListeners();
 
 function viewPopupImagePic(name, link) {
-  formImgClicked.src = link;
-  formImgClicked.alt = name;
-  nameImgClicked.textContent = name;
   popupViewImage.open(name, link);
 }
 const profileValidation = new FormValidator(validationOptions, newCardInfo);
