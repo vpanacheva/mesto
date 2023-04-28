@@ -7,8 +7,8 @@ import Popup  from "./Popup.js"
     this.formImgClicked = this._popup.querySelector(".popup__image");
     this.nameImgClicked = this._popup.querySelector(".popup__figcaption");
     }
-     open(name, img) {
-      this.formImgClicked.src = img;
+    open({name, link}) {
+      this.formImgClicked.src = link;
       this.formImgClicked.alt = name;
       this.nameImgClicked.textContent = name;
       super.open();

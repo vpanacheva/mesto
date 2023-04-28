@@ -15,7 +15,9 @@
                 <section class="profile">
                     <div class="profile__container">
                     <div class="profile__avatar">
+                        <button class="profile__avatar-button" type="button">
                     <img class="profile__avatar-img" src="<%=require('./images/image.jpg')%>" alt="Жак-Ив Кусто"> 
+                        </button>
                 </div>
                 <div class="profile__info">
                     <h1 class="profile__title">Жак-Ив Кусто</h1>
@@ -76,6 +78,28 @@
             </figure>
             </div>
           </section>
+          <section class="popup popup_type_delete">
+            <div class="popup__container">
+                <button class="popup__close-button" type="button"></button>
+                <form class="popup__form popup__form-delete" name="popup-form-delete" novalidate></form>
+                    <h3 class="popup__header">Вы уверены?</h3>
+                <button class="popup__save-button popup__save-button_delete" type="submit" disabled>Да</button>
+              </form>
+            </div>
+        </section>
+        <section class="popup popup_type-avatar">
+            <div class="popup__container">
+                <button class="popup__close-button" type="button"></button>
+                <form class="popup__form popup__form-avatar" name="popup__form-avatar" novalidate>
+              <h3 class="popup__header">Обновить аватар</h3>
+                <label class="popup__form-info"></label>
+              <input id="link-input" type="url" class="popup__input popup__input_type_link" placeholder="Ссылка на аватар" name="link" value="" required>
+              <span class="popup__input-error link-input-error"></span>
+            </label>
+              <button class="popup__save-button popup__save-button_disabled" type="submit" disabled>Сохранить</button>
+              </form>
+            </div>
+        </section>
     </div> 
     <template id="card__template">
         <li class ="card__info">
@@ -84,7 +108,9 @@
             <button class="card__remove-button" type="button"></button>
             <div class="card__descrption">
                  <h2 class="card__title"></h2>
-            <button class="card__like-button" type="button"></button>
+                 <div class="card__place">
+                    <button class="card__like-button" type="button"></button>
+                    <p class="card__likes-counter"></p>
 </div>
 </div>
 </li>
