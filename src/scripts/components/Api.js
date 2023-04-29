@@ -70,6 +70,7 @@ export class Api {
     }).then(this._getResponseData)
   }
 
+
   removeCardLike(_id) {
     return fetch(`${this._url}/cards/${_id}/likes`, {
       method: 'DELETE',

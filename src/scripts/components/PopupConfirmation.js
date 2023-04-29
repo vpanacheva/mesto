@@ -5,7 +5,6 @@ export class PopupConfirmation extends Popup {
     super(popupSelector);
     this._form = this._popup.querySelector(".popup__form");
     this._submitButton =this._form.querySelector(".popup__save-button");
-   this._submitButtonText = this._submitButton.textContent;
   }
 
   setSubmit(submit) {
@@ -21,13 +20,8 @@ export class PopupConfirmation extends Popup {
     });
   }
 
-  renderLoading(isLoading, submitButtonText) {
-    if (isLoading) {
-      this._submitButton.textContent = submitButtonText;
-      this._submitButton.disabled = true;
-    } else {
-      this._submitButton.textContent = submitButtonText;
-      this._submitButton.disabled = false;
-    }
-  }
+  setSubmitButtonState(isDisabled, submitButtonText) {
+    this._submitButton.textContent = submitButtonText;
+    this._submitButton.disabled = isDisabled;
+} 
 }

@@ -4,13 +4,13 @@ import Popup  from "./Popup.js"
   constructor(popupSelector) {
     super(popupSelector);
 
-    this.formImgClicked = this._popup.querySelector(".popup__image");
-    this.nameImgClicked = this._popup.querySelector(".popup__figcaption");
+    this._image = this._popup.querySelector(".popup__image");
+    this._caption = this._popup.querySelector(".popup__figcaption");
     }
     open({name, link}) {
-      this.formImgClicked.src = link;
-      this.formImgClicked.alt = name;
-      this.nameImgClicked.textContent = name;
+      this._image.src = link;
+      this._image.alt = name;
+      this._caption.textContent = name;
       super.open();
   };
 }
