@@ -81,9 +81,9 @@
           <section class="popup popup_type_delete">
             <div class="popup__container">
                 <button class="popup__close-button" type="button"></button>
-                <form class="popup__form popup__form-delete" name="popup-form-delete" novalidate></form>
+                <form class="popup__form popup__form-delete" name="popup-form-delete" novalidate>
                     <h3 class="popup__header">Вы уверены?</h3>
-                <button class="popup__save-button popup__save-button_delete" type="submit" disabled>Да</button>
+                <button class="popup__save-button popup__save-button_delete" id="trashSubmit" type="submit" disabled>Да</button>
               </form>
             </div>
         </section>
@@ -92,7 +92,7 @@
                 <button class="popup__close-button" type="button"></button>
                 <form class="popup__form popup__form-avatar" name="popup__form-avatar" novalidate>
               <h3 class="popup__header">Обновить аватар</h3>
-                <label class="popup__form-info"></label>
+                <label class="popup__form-info">
               <input id="link-input" type="url" class="popup__input popup__input_type_link" placeholder="Ссылка на аватар" name="link" value="" required>
               <span class="popup__input-error link-input-error"></span>
             </label>

@@ -51,6 +51,7 @@ Promise.all([api.getUserInfoApi(), api.getInitialCards()])
     console.log(err);
   });
 
+
   const popupViewImage = new PopupWithImage('.popup_type_image')
   popupViewImage.setEventListeners();
   function viewPopupImagePic(name, link) {
@@ -61,9 +62,9 @@ Promise.all([api.getUserInfoApi(), api.getInitialCards()])
     profileJobInput.value = data.about;
   }
 
-const user = new UserInfo({ nameSelector: '.profile__title', aboutSelector: '.profile__subtitle', avatarSelector: '.profile__avatar'});
+const user = new UserInfo({ nameSelector: '.profile__title', aboutSelector: '.profile__subtitle', avatarSelector: '.profile__avatar-img'});
 
-const popupConfirm = new PopupConfirmation('.popup_type_delete')
+const popupConfirm = new PopupConfirmation('.popup_type_delete');
 popupConfirm.setEventListeners();
 
 const popupProfile = new PopupWithForm('.popup_type_info',  (inputs) => {
@@ -127,7 +128,8 @@ const createCard = (data) => {
         popupConfirm.open();
         popupConfirm.setSubmit(() => {
           popupConfirm.renderLoading(true, 'Удаляем...');
-          api.removeCardApi(card.getId())
+          api
+            .removeCardApi(card.getId())
             .then(() => {
               card.removeCard();
               popupConfirm.close();
