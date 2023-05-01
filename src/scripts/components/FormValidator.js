@@ -8,23 +8,21 @@ export class FormValidator {
     this._formElement = formElement;
   }
 
-  _showInputError() {
-    const errorElement = this._formElement.querySelector(
-      `.${this._inputElement.id}-error`);
+  _showInputError(inputElement) {
+    const errorElement = this._formElement.querySelector(`.${this._inputElement.id}-error`); 
     this._inputElement.classList.add(this._inputErrorClass);
     errorElement.textContent = this._inputElement.validationMessage; 
     errorElement.classList.add(this._errorClass); 
   }
 
-  _hideInputError() {
+  _hideInputError(inputElement) {
     const errorElement = this._formElement.querySelector(
       `.${this._inputElement.id}-error`
-    ); 
+    ); // находим элемент ошибки
     this._inputElement.classList.remove(this._inputErrorClass);
-    errorElement.classList.remove(this._errorClass); 
+    errorElement.classList.remove(this._errorClass); //
     errorElement.textContent = ''; 
   }
-
 
   _isValid(inputElement) {
     if (!this._inputElement.validity.valid) {
@@ -38,7 +36,7 @@ export class FormValidator {
     const isFormValid = this._formElement.checkValidity();
     this._buttonElement.disabled = !isFormValid;
     this._buttonElement.classList.toggle(
-      this._inactiveButtonClass,
+      this._inactiveButtonClass, 
       !isFormValid 
     );
   }
