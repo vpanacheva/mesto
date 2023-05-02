@@ -57,16 +57,15 @@ export class Card {
       this._elementRemove.remove();
     }
   }
-
-  _checkIsLiked() {
-    if (
-      this._likes.some((user) => {
-        return this._userId === user._id;
-      })
-    ) {
-      this._elementLike.classList.add("card__like_active-button");
-    }
+  _isLiked(){
+    return this._likes.some(user => user._id === this._userId);
   }
+  _checkIsLiked() { 
+    if (this._isLiked()) 
+    { 
+      this._elementLike.classList.add("card__like_active-button"); 
+    } 
+  } 
 
   _setEventListeners() {
     this._elementImg.addEventListener("click", () => {

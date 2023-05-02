@@ -8,22 +8,21 @@ export class FormValidator {
     this._formElement = formElement;
   }
 
-  _showInputError(inputElement) {
-    const errorElement = this._formElement.querySelector(`.${this._inputElement.id}-error`); 
-    this._inputElement.classList.add(this._inputErrorClass);
-    errorElement.textContent = this._inputElement.validationMessage; 
-    errorElement.classList.add(this._errorClass); 
-  }
+  _showInputError() { 
+    const errorElement = this._formElement.querySelector(  `.${this._inputElement.id}-error`); 
+    this._inputElement.classList.add(this._inputErrorClass); 
+    errorElement.textContent = this._inputElement.validationMessage;  
+    errorElement.classList.add(this._errorClass);  
 
-  _hideInputError(inputElement) {
-    const errorElement = this._formElement.querySelector(
-      `.${this._inputElement.id}-error`
-    ); // находим элемент ошибки
-    this._inputElement.classList.remove(this._inputErrorClass);
-    errorElement.classList.remove(this._errorClass); //
-    errorElement.textContent = ''; 
-  }
-
+  } 
+  _hideInputError() { 
+  const errorElement = this._formElement.querySelector( 
+    `.${this._inputElement.id}-error` 
+    );  
+    this._inputElement.classList.remove(this._inputErrorClass); 
+    errorElement.classList.remove(this._errorClass);  
+    errorElement.textContent = '';  
+  } 
   _isValid(inputElement) {
     if (!this._inputElement.validity.valid) {
       this._showInputError(inputElement);
