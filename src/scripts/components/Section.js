@@ -3,12 +3,12 @@ export class Section{
     this._renderer = renderer;
     this._container = container;
   }
-  addItem(items) {
-    this._container.prepend(items);
+  addItem(element) {
+    this._container.prepend(element);
   }
 
-  renderItems(element) {
-    element.reverse().forEach((item) => this._renderer(item)
+  renderItems(items) {
+    items.reverse().forEach((item) => this._renderer(item)
     );
   }
 }

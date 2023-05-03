@@ -168,8 +168,8 @@ const createCard = (data) => {
 
 const cardsSection = new Section(
   {
-    renderer: (item) => {
-      cardsSection.addItem(createCard(item));
+    renderer: (element) => {
+      cardsSection.addItem(createCard(element));
     },
   },
   cardsContainer
